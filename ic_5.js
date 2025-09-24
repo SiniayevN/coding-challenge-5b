@@ -1,15 +1,19 @@
-let products = [
-    { name: "Laptop", price: 999.99, weight: 2.5 },
-    { name: "Smartphone", price: 699.99, weight: 0.2 },
-    { name: "Desk Chair", price: 89.99, weight: 9.0},
-    { name: "Bookcase", price: 129.99, weight: 15.0 },
-    { name: "Headphones", price: 199.99, weight: 0.4 }
+// Esports Arena catalog (price per unit)
+const products = [
+  { id: 201, name: "Pro Mouse (wired)",   category: "gear",    price: 39.99 },
+  { id: 202, name: "Team Jersey",         category: "apparel", price: 49.5  },
+  { id: 203, name: "Energy Drink 6-pack", category: "snacks",  price: 12.0  },
+  { id: 204, name: "Arena Day Pass",      category: "access",  price: 15.0  },
+  { id: 205, name: "Switchable Keycaps",  category: "gear",    price: 19.0  }
 ];
 
-function calculateShipping (weight) {
-    return weight * 2.5
-}
-console.log (calculateShipping(10));
+// Example cart (product & quantity)
+const cart = [
+  { productId: 202, qty: 1 },
+  { productId: 203, qty: 2 },
+  { productId: 204, qty: 1 },
+  { productId: 205, qty: 1 }
+];
 
-
-
+// Try: "regular", "student", "member", or "vip"
+const customerType = "member";
