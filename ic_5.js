@@ -21,12 +21,33 @@ const customerType = "member";
 
 //Step 1 
 function getCategoryDiscount(category) {
-    const discounts = {
-        gear: 0.1,
-        apparel: 0.15,
-        snacks: 0.08,
-        access: 0.05
-    };
-    return discounts[category] || 0;
+    switch(category) {
+        case "gear":
+            return 0.1;
+            break
 
-};
+        case "apparel":
+            return 0.15;
+            break   
+        case "snacks":
+            return 0.08;
+            break   
+        case "access":
+            return 0.05;
+            break   
+        default:
+            return 0;
+            break
+    }
+}
+console.log(getCategoryDiscount("gear"));
+
+//Step 2 
+
+function priceAfterCategoryDiscount(product) {
+let rate = getCategoryDiscount(product.category);
+return product.price * (1 - rate);
+}
+
+console.log (priceAfterCategoryDiscount(products[0]));
+
