@@ -51,3 +51,13 @@ return product.price * (1 - rate);
 
 console.log (priceAfterCategoryDiscount(products[0]));
 
+//Step 3
+
+function findProductById(id){
+    for (let p of products){
+        if (p.id === id)
+            return p;
+        }
+        return null;
+}    
+//Step 4 
