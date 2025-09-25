@@ -18,12 +18,15 @@ const cart = [
 // Try: "regular", "student", "member", or "vip"
 const customerType = "member";
 
+
+//Step 1 
 function getCategoryDiscount(category) {
     const discounts = {
         gear: 0.1,
         apparel: 0.15,
         snacks: 0.08,
-        access 0.05
-};
+        access: 0.05
+    };
     return discounts[category] || 0;
-}
+
+};
